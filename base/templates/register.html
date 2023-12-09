@@ -4,10 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "{% static register.css %}"/>
+    <link rel = "stylesheet" href = "{% static 'css/register.css' %}"/>
     <title>Document</title>
 </head>
 <body>
-    
+    <div class = "container">
+        <div class = "register-wrapper">
+            <form class = "register-form">
+                <div class = "form-text-container">
+                    <h3 class = "logo">Studydl</h3>
+                    <div class = "seperator">
+                        <p>Register to get onboard</p>
+                    </div>
+                </div>
+
+                <div class = "inputs-container">
+                    <div class = "input-div">
+                        <input placeholder = "First Name" type = "text" name = "first-name">
+                    </div>
+
+                    <div class = "input-div">
+                        <input placeholder = "Last Name" type = "text" name = "last-name">
+                    </div>
+
+                    <div class = "input-div">
+                        <input placeholder = "Email" type = "email" name = "email" class = "email">
+                    </div>
+
+                    <div class = "input-div">
+                        <input placeholder = "Password" type = "password" name = "password" class = "password">
+                    </div>
+
+                    <div class = "input-div">
+                        <input placeholder = "Confirm Password" type = "password" name = "confirm-password" class = "password">
+                    </div>
+
+                    <button type = "button" class = "submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
