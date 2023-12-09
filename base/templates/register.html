@@ -4,42 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "{% static 'css/register.css' %}"/>
-    <title>Document</title>
+    <link rel = "stylesheet" href = "{% static 'css/register.css' %}">
+    <style>
+        .seperator::before{
+            border-top : 1px solid rgba(0, 0, 0, .4);
+        }
+    </style>
+    <title>Register</title>
 </head>
 <body>
     <div class = "container">
         <div class = "register-wrapper">
-            <form class = "register-form">
+            <form class = "register-form" method="post">
+                {% csrf_token %}
                 <div class = "form-text-container">
                     <h3 class = "logo">Studydl</h3>
                     <div class = "seperator">
                         <p>Register to get onboard</p>
                     </div>
                 </div>
-
+                {% for messages in messages %}
+                {{messages}}
+                {% endfor %}
                 <div class = "inputs-container">
                     <div class = "input-div">
-                        <input placeholder = "First Name" type = "text" name = "first-name">
+                        <input placeholder = "Username" type = "text" name = "username">
                     </div>
 
-                    <div class = "input-div">
-                        <input placeholder = "Last Name" type = "text" name = "last-name">
-                    </div>
+                   
 
                     <div class = "input-div">
                         <input placeholder = "Email" type = "email" name = "email" class = "email">
                     </div>
 
                     <div class = "input-div">
-                        <input placeholder = "Password" type = "password" name = "password" class = "password">
+                        <input placeholder = "Password" type = "password" name = "password1" class = "password">
                     </div>
 
                     <div class = "input-div">
-                        <input placeholder = "Confirm Password" type = "password" name = "confirm-password" class = "password">
+                        <input placeholder = "Confirm Password" type = "password" name = "password2" class = "password">
                     </div>
 
-                    <button type = "button" class = "submit">Submit</button>
+                    <button type = "submit" class = "submit">Submit</button>
                 </div>
             </form>
         </div>

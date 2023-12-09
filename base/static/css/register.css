@@ -71,7 +71,7 @@ button:active{
     top : 12px;
     left : 0;
     width : 100%;
-    border-top : 1px solid black;
+    border-top : 1px solid rgba(0, 0, 0, .4);
     z-index : -1;
 
 }
@@ -80,13 +80,12 @@ button:active{
     width : fit-content;
     background-color : white;
     margin : auto auto 20px;
-    color : rgba(0, 0, 0, .5)
+    color : rgba(0, 0, 0, .7)
 }
 
 .inputs-container{
     display : flex;
     flex-direction : column;
-    gap: 20px;
     /* align-items : center; */
     
 }
@@ -94,15 +93,21 @@ button:active{
 .input-div{
     border : 1px solid #ccc8c8;
     border-radius : 10px;
-
     padding :   10px;
     text-align : left;
+}
+
+.input-div:not(:last-child){
+    margin-bottom : 20px;
 }
 
 .input-div > input{
     height : 100%;
     font-size : 14px;
+    width : 100%;
 }
+
+
 
 .input-div > input::placeholder{
     font-family : inherit;
